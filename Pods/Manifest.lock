@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.1.0)
+  - CircleMenu (2.0.1)
+  - SwiftyJSON (3.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.1.0)
+  - CircleMenu (~> 2.0.1)
+  - SwiftyJSON (~> 3.1.1)
+
+SPEC CHECKSUMS:
+  Alamofire: e266cf991b933498df791e645e0d8ac294492153
+  CircleMenu: a964e8b03aae58c84b40d5cf64630b62bef077eb
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
+
+PODFILE CHECKSUM: 49dc4a0f107a5c14ee81290640a60427f2e09b8c
+
+COCOAPODS: 1.1.1

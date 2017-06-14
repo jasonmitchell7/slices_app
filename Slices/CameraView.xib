@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController" customModule="Slices" customModuleProvider="target">
+            <connections>
+                <outlet property="filtersButton" destination="GJF-pa-Kot" id="vdU-jR-bZZ"/>
+                <outlet property="flashButton" destination="UUd-JE-Scp" id="Dg9-CD-5lQ"/>
+                <outlet property="imgMain" destination="nd2-2z-Ofs" id="1uG-Jd-NBJ"/>
+                <outlet property="lblInstructions" destination="0cn-4p-JET" id="es1-zC-zKe"/>
+                <outlet property="masksButton" destination="G4d-uk-fjP" id="nKW-Kb-Hom"/>
+                <outlet property="optionsView" destination="pFZ-lO-hUj" id="fJb-ps-cTU"/>
+                <outlet property="parentSliceButton" destination="zIp-SL-yp7" id="nqs-Xc-q4l"/>
+                <outlet property="saveButton" destination="cMO-cx-nh2" id="Gyc-ef-EfP"/>
+                <outlet property="stackViewBG" destination="0UP-AM-SSP" id="VZI-01-4Gc"/>
+                <outlet property="textButton" destination="Q58-kH-wq3" id="v4p-J9-dT6"/>
+                <outlet property="timelineView" destination="GNU-hO-Y3C" id="Hn4-Qa-8Ri"/>
+                <outlet property="trashButton" destination="bhF-uE-p9U" id="zPM-PK-HW4"/>
+                <outlet property="uploadButton" destination="cLR-jP-yoZ" id="Vln-rb-TGl"/>
+                <outlet property="view" destination="iN0-l3-epB" id="pEp-SP-c5F"/>
+                <outlet property="viewPreview" destination="CIF-ZK-Gmg" id="dGn-Hc-iKT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nd2-2z-Ofs" userLabel="imgMain">
+                    <rect key="frame" x="0.0" y="292" width="375" height="375"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CIF-ZK-Gmg" userLabel="viewPreview">
+                    <rect key="frame" x="0.0" y="292" width="375" height="375"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap To Take A Photo" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cn-4p-JET">
+                            <rect key="frame" x="85" y="85" width="205" height="205"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                            <color key="textColor" red="0.92549020051956177" green="0.94117647409439087" blue="0.94509804248809814" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="CIF-ZK-Gmg" secondAttribute="height" multiplier="1:1" id="ONz-As-Rzd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFZ-lO-hUj">
+                    <rect key="frame" x="2" y="66" width="317" height="177"/>
+                </view>
+                <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMO-cx-nh2">
+                    <rect key="frame" x="325" y="617" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Azp-Rl-eOh"/>
+                        <constraint firstAttribute="width" constant="44" id="D0r-cp-EP7"/>
+                    </constraints>
+                    <state key="normal" image="Save"/>
+                    <connections>
+                        <action selector="didPressSave:" destination="-1" eventType="touchUpInside" id="LLW-We-CEM"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhF-uE-p9U">
+                    <rect key="frame" x="6" y="617" width="44" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="Trash"/>
+                    <connections>
+                        <action selector="didPressTrash:" destination="-1" eventType="touchUpInside" id="mmQ-hC-4l7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUd-JE-Scp">
+                    <rect key="frame" x="325" y="299" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="Knq-oz-XK3"/>
+                        <constraint firstAttribute="height" constant="44" id="qHK-fy-HJ0"/>
+                    </constraints>
+                    <state key="normal" image="FlashOff"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNU-hO-Y3C">
+                    <rect key="frame" x="2" y="245" width="317" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="bzB-sO-O9L"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="i9b-NT-Ezg">
+                    <rect key="frame" x="321" y="66" width="52" height="222"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIp-SL-yp7">
+                            <rect key="frame" x="0.0" y="0.0" width="52" height="44"/>
+                            <state key="normal" image="ParentSlice"/>
+                            <connections>
+                                <action selector="didPressParentSlice:" destination="-1" eventType="touchUpInside" id="LkO-bo-7Jc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJF-pa-Kot">
+                            <rect key="frame" x="0.0" y="44.5" width="52" height="44"/>
+                            <state key="normal" image="Filters"/>
+                            <connections>
+                                <action selector="didPressFilters:" destination="-1" eventType="touchUpInside" id="NAi-7w-57J"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4d-uk-fjP">
+                            <rect key="frame" x="0.0" y="89" width="52" height="44"/>
+                            <state key="normal" image="Masks"/>
+                            <connections>
+                                <action selector="didPressMasks:" destination="-1" eventType="touchUpInside" id="lWv-f4-CEi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q58-kH-wq3">
+                            <rect key="frame" x="0.0" y="133.5" width="52" height="44"/>
+                            <state key="normal" image="Text"/>
+                            <connections>
+                                <action selector="didPressText:" destination="-1" eventType="touchUpInside" id="dAI-FJ-qcH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLR-jP-yoZ">
+                            <rect key="frame" x="0.0" y="178" width="52" height="44"/>
+                            <state key="normal" image="Upload"/>
+                            <connections>
+                                <action selector="didPressUpload:" destination="-1" eventType="touchUpInside" id="7Ua-Ip-c4y"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="52" id="Lgi-SZ-eMF"/>
+                    </constraints>
+                </stackView>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0UP-AM-SSP">
+                    <rect key="frame" x="321" y="66" width="52" height="223"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.091019205749034882" green="0.50776475667953491" blue="0.67271995544433594" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="CIF-ZK-Gmg" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="1uW-fB-teV"/>
+                <constraint firstItem="CIF-ZK-Gmg" firstAttribute="top" secondItem="GNU-hO-Y3C" secondAttribute="bottom" constant="3" id="2eL-Xh-iRn"/>
+                <constraint firstItem="GNU-hO-Y3C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="63b-Tw-sWS"/>
+                <constraint firstItem="pFZ-lO-hUj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="66" id="661-nr-PkH"/>
+                <constraint firstAttribute="trailing" secondItem="UUd-JE-Scp" secondAttribute="trailing" constant="6" id="Bnu-p1-o14"/>
+                <constraint firstItem="i9b-NT-Ezg" firstAttribute="leading" secondItem="pFZ-lO-hUj" secondAttribute="trailing" constant="2" id="LXe-SN-9ud"/>
+                <constraint firstAttribute="trailing" secondItem="cMO-cx-nh2" secondAttribute="trailing" constant="6" id="LuL-7G-Azu"/>
+                <constraint firstItem="GNU-hO-Y3C" firstAttribute="width" secondItem="pFZ-lO-hUj" secondAttribute="width" id="LwU-fy-ffa"/>
+                <constraint firstAttribute="bottom" secondItem="cMO-cx-nh2" secondAttribute="bottom" constant="6" id="RJu-ep-tA4"/>
+                <constraint firstItem="pFZ-lO-hUj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-27" id="SOq-BC-jSq"/>
+                <constraint firstItem="pFZ-lO-hUj" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-58" id="afv-w8-tGn"/>
+                <constraint firstItem="GNU-hO-Y3C" firstAttribute="top" secondItem="pFZ-lO-hUj" secondAttribute="bottom" constant="2" id="drB-td-UeC"/>
+                <constraint firstItem="nd2-2z-Ofs" firstAttribute="height" secondItem="CIF-ZK-Gmg" secondAttribute="height" id="ekf-UL-tTg"/>
+                <constraint firstItem="CIF-ZK-Gmg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gbT-hg-sX1"/>
+                <constraint firstAttribute="bottom" secondItem="CIF-ZK-Gmg" secondAttribute="bottom" id="iUI-Th-FRP"/>
+                <constraint firstItem="i9b-NT-Ezg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="66" id="inu-qQ-B3v"/>
+                <constraint firstItem="nd2-2z-Ofs" firstAttribute="leading" secondItem="CIF-ZK-Gmg" secondAttribute="trailing" constant="-375" id="jPe-vT-08P"/>
+                <constraint firstItem="nd2-2z-Ofs" firstAttribute="top" secondItem="CIF-ZK-Gmg" secondAttribute="bottom" constant="-375" id="jus-l3-4lA"/>
+                <constraint firstItem="nd2-2z-Ofs" firstAttribute="width" secondItem="CIF-ZK-Gmg" secondAttribute="width" id="k4C-z6-c8c"/>
+                <constraint firstItem="CIF-ZK-Gmg" firstAttribute="top" secondItem="i9b-NT-Ezg" secondAttribute="bottom" constant="4" id="tX8-Hr-Z54"/>
+                <constraint firstItem="CIF-ZK-Gmg" firstAttribute="top" secondItem="UUd-JE-Scp" secondAttribute="bottom" constant="-51" id="yNv-od-aWG"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="41.5" y="323.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Filters" width="44" height="44"/>
+        <image name="FlashOff" width="44" height="44"/>
+        <image name="Masks" width="44" height="44"/>
+        <image name="ParentSlice" width="44" height="44"/>
+        <image name="Save" width="44" height="44"/>
+        <image name="Text" width="44" height="44"/>
+        <image name="Trash" width="44" height="44"/>
+        <image name="Upload" width="44" height="44"/>
+    </resources>
+</document>

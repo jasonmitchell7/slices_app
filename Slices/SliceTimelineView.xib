@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SliceTimelineView" customModule="Slices" customModuleProvider="target">
+            <connections>
+                <outlet property="timelineScrollView" destination="T1C-3P-hH6" id="NNF-Xd-8qI"/>
+                <outlet property="view" destination="iN0-l3-epB" id="9LZ-nV-RJj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1C-3P-hH6">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.091019205749999998" green="0.50776475669999999" blue="0.67271995539999996" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="T1C-3P-hH6" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AlX-IQ-N7W"/>
+                <constraint firstItem="T1C-3P-hH6" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="CrJ-dl-Wfh"/>
+                <constraint firstItem="T1C-3P-hH6" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="xao-u6-N2B"/>
+                <constraint firstItem="T1C-3P-hH6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yLk-hP-Lnk"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="17.5" y="-258"/>
+        </view>
+    </objects>
+</document>
